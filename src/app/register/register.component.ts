@@ -18,9 +18,10 @@ export class RegisterComponent {
 
   
   register() {
-   // console.log("Register:: ",this.username,"  ",this.password, " ",this.passwordVerify);
+   
     if(this.password == this.passwordVerify){
       this.authService.register(this.username,this.password)
+
     }else{
       //TODO error de contraseñas no son iguales
     }

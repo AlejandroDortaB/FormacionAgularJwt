@@ -19,7 +19,5 @@ export class LoginComponent {
     console.log("Login:: ",this.username,"  ",this.password);
     this.authService.login(this.username,this.password);
   }
-  retricted(){
-    this.authService.retrictedPetition();
-  }
+  
 }

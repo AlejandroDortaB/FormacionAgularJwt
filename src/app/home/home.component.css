@@ -1,0 +1,10 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.my-textArea{
+    margin: 50px;
+    width: 300px;
+}
