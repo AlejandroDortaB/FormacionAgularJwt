@@ -11,5 +11,5 @@ export const routes: Routes = [
     {path:"register",component:RegisterComponent},
     {path:"home",component:HomeComponent,canActivate:[verifyTokenGuard]},
     {path: '', component: LoginComponent },
-    /* {path:"**",component:ErrorPageComponent} */
+    {path:"**",component:ErrorPageComponent}
 ];
