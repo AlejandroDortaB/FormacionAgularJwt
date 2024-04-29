@@ -19,12 +19,25 @@ export class AuthService {
         sessionStorage.setItem("token",result.token)
         this.router.navigateByUrl('home');
       })
-    ).subscribe();
+    ).subscribe({
+      next:()=>{},
+      error:(error)=>{
+        alert(`ERROR: ${error.error.error}`);
+        console.log(error);
+      },
+
+    });
   }
   register(username:string,password:string){
-    this.http.post<GeneralResponse>('http://localhost:8080/auth/register',{username:username,password:password}).subscribe((result:GeneralResponse)=>{
-      console.log("result",result)
-      alert("registrado exitosamente")
+    this.http.post<GeneralResponse>('http://localhost:8080/auth/register',{username:username,password:password}).subscribe({
+      next:(result:GeneralResponse)=>{
+        console.log("result",result)
+        alert("registrado exitosamente")
+      },
+      error:(error)=>{
+        alert(`ERROR: ${error.error.error}`);
+        console.log(error);
+      }
     })
   }
   logout(){
