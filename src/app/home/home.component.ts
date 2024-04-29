@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { FormsModule } from '@angular/forms';
+import { GeneralResponse } from '../intefaces/general-response';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ export class HomeComponent {
   protected text:string="";
 
   retricted(){
-    this.authService.retrictedPetition().subscribe((result:any)=>{
+    this.authService.retrictedPetition().subscribe((result:GeneralResponse)=>{
       console.log(result);
       this.text=result.status;
     });
