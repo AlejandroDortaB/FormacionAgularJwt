@@ -1,0 +1,24 @@
+<div class="container"> 
+  <form (submit)="register()">
+    <h2>Register</h2>
+    <div>
+      <label for="username">Nombre de usuario:</label>
+      <input type="text" id="username" name="username"  [(ngModel)]="username" required>
+    </div>
+    <div>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password"   name="password" [(ngModel)]="password" required>
+    </div>
+    <div>
+      <label for="passwordVerify">Verifique su Contraseña:</label>
+      <input type="password" id="passwordVerify" name="passwordVerify"  [(ngModel)]="passwordVerify" required>
+    </div>
+    <button type="submit">Register</button>
+    <div class="error-message"> 
+      <!-- Mensajes de error-->
+    </div>
+    <br>
+    <a  href="Login">Volver al login</a>
+  </form>
+</div>
+
